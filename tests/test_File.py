@@ -7,7 +7,7 @@ import pytest
 import shutil
 
 sys.path.append("sources")
-import File
+from sources import File
 
 #setup
 
@@ -39,3 +39,4 @@ def test_SaveCapturedImage(setup) :
 
 def test_GetFilesInDir(setup) :
     assert File.GetFilesInDir(os.getcwd()) != []
+

@@ -3,7 +3,7 @@ import os
 import sys
 
 sys.path.append("sources")
-import Process
+from sources import Process
 
 
 class TestProcess(unittest.TestCase) :

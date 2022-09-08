@@ -1,5 +1,6 @@
 ﻿import os 
-import pytest
+import tkinter
+
 from PIL import Image
 
 def CheckDirExist(dir : str) -> bool :
@@ -35,3 +36,18 @@ def GetFilesInDir(dir : str) -> list :
         return os.listdir(dir)
     except:
         return []
+
+def ShowFileDialog() -> os.__file__:
+        return tkinter.filedialog.askopenfilename(
+            title="Open File",
+            initialdir=os.getcwd(),
+            filetypes=[("All Files", "*.*"), ("Python Files", "*.py")]
+        )
+
+def ShowSaveFileDialog(file : os.__file__) -> os.__file__ : 
+    return tkinter.filedialog.asksaveasfile(
+        title="Save File",
+        initialdir=os.getcwd(),
+        initialfile=file,
+        filetypes=[("All Files", "*.*"), ("Python Files", "*.py")]
+    )
