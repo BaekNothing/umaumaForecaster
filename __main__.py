@@ -27,7 +27,7 @@ def SetupWindow(title : str) -> tkinter.Tk :
     Interface.Util.SetWindowSizePosition(window, _windowSize, Interface.Vector2(screenWidth / 2, screenHeight / 2))
     
     #Set window transparent
-    window.attributes("-topmost", True)
+    #window.attributes("-topmost", True)
     window.attributes("-alpha", 0.3)
     window.attributes("-transparentcolor", "white")
     window.configure(background="white")

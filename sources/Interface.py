@@ -54,12 +54,6 @@ class Util :
 
     def SetWindowSizePosition(window : tkinter.Tk, size : Vector2, position : Vector2) :
         window.geometry(f"{size.x}x{size.y}+{('%.0f'%position.x)}+{'%.0f'%position.y}")
-        print(
-            window.winfo_width(),
-            window.winfo_height(),
-            window.winfo_x(),
-            window.winfo_y()
-        )
 
     def __SetImageInWindow(window : tkinter.Tk, size : Vector2, path : str) -> tkinter.Label:
         originImage = Image.open(path)
